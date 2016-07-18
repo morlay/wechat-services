@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+Hello Wechat
+
+<script src="//res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+<script>
+    fetch(`/wechat/sdk/config?url=${encodeURIComponent(`${location.origin}${location.pathname}${location.search}`)}`)
+            .then(res => res.json())
+            .then(({ appId, timestamp, nonceStr, signature }) => wx.config({
+                appId,
+                timestamp,
+                nonceStr,
+                signature,
+            }))
+</script>
+</body>
+</html>

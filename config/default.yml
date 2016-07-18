@@ -1,0 +1,6 @@
+WECHAT:
+  APP_ID: wx1c5a2b08769fe64e
+  APP_SECRET: fdd4aebd3eff11cb5bf06cb4b07c0a30
+
+PORT: 3000
+LOG_LEVEL: info
